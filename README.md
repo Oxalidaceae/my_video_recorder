@@ -16,7 +16,7 @@ my personal video recorder using OpenCV
 3. 'B' 또는 'b'를 누르면 얼굴을 제외한 나머지 부분을 다음과 같이 블러 처리할 수 있습니다.
 ![screenshot3](/imgs/screenshot3.png)
 
-4. 스페이스(space)를 누르면 녹화를 시작하거나 중단할 수 있습니다. 녹화 중일 때는 다음과 같이 <span style="color:red">REC</span>와 <span style="color:red">붉은 점</span>이 화면에 나타납니다. 이 부분은 녹화된 파일에 저장되지 않습니다.
+4. 스페이스(space)를 누르면 녹화를 시작하거나 중단할 수 있습니다. 녹화 중일 때는 다음과 같이 **REC** 🔴 표시가 화면에 나타납니다. 이 부분은 녹화된 파일에 저장되지 않습니다.
 ![screenshot4](/imgs/screenshot4.png)
 
 5. 저장된 파일은 다음과 같이 저장소에 output(숫자).avi로 저장되며 한 번에 여러 번의 녹화를 진행할 수 있습니다.
@@ -30,4 +30,4 @@ my personal video recorder using OpenCV
 
 예시로 녹화된 파일입니다.
 
-*본 설명에서 쓰인 사람의 이미지는 Grok3를 이용해 만들어진 이미지입니다.*
+*본 설명에서 쓰인 사람의 이미지는 Grok3 AI를 이용해 만들어진 이미지입니다.*
