@@ -29,13 +29,13 @@ while True:
     if not ret:
         break
 
-    original_frame = frame.copy()  # 녹화용 (REC 없는 깨끗한 블러 적용된 영상)
-    display_frame = frame.copy()   # 화면 출력용 (REC 표시 포함)
+    original_frame = frame.copy()  # 녹화용 (REC 표시 제외 및 블러 포함)
+    display_frame = frame.copy()   # 화면 출력용 (블러와 REC 표시 포함)
 
     # 얼굴 제외 블러 처리 (화면 & 녹화 모두 적용)
     if blur_enabled:
-        gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+        gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # gray scale에서 속도가 더 빠름름
+        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)) # gray scale에서 얼굴 검출
 
         blurred_frame = cv.GaussianBlur(frame, (35, 35), 30)  # 전체 배경 블러 적용
 
@@ -73,7 +73,7 @@ while True:
         blur_enabled = not blur_enabled
         print("Background blur enabled" if blur_enabled else "Background blur disabled")
 
-    # 녹화 중이면 블러 적용된 원본 저장 (REC 없는 영상)
+    # 녹화 중이면 블러 적용된 원본 저장 (REC는 제외외)
     if isRecording and save is not None:
         save.write(original_frame)
 
