@@ -34,7 +34,7 @@ while True:
 
     # 얼굴 제외 블러 처리 (화면 & 녹화 모두 적용)
     if blur_enabled:
-        gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # gray scale에서 속도가 더 빠름름
+        gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY) # gray scale에서 속도가 더 빠름
         faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)) # gray scale에서 얼굴 검출
 
         blurred_frame = cv.GaussianBlur(frame, (35, 35), 30)  # 전체 배경 블러 적용
